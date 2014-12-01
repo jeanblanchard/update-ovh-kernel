@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-INSTALLED_KERNEL_FILE="/var/run/ovh-kernel"
+INSTALLED_KERNEL_FILE="/etc/ovh-kernel"
 KERNEL_DIR="/boot"
 KERNEL_VARIANT="grs-ipv6-64"
 KERNEL_CHANNEL="production"
