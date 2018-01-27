@@ -3,7 +3,7 @@
 # Configuration
 INSTALLED_KERNEL_FILE="/etc/ovh-kernel"
 KERNEL_DIR="/boot"
-KERNEL_VARIANT="grs-ipv6-64"
+KERNEL_VARIANT="std-ipv6-64"
 KERNEL_CHANNEL="production"
 NOTIFY_REBOOT_REQUIRED_COMMAND=/usr/share/update-notifier/notify-reboot-required
 UPDATE_GRUB_COMMAND=/usr/sbin/update-grub
