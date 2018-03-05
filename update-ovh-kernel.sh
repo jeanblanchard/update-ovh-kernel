@@ -10,8 +10,15 @@ UPDATE_GRUB_COMMAND=/usr/sbin/update-grub
 
 #-----------------
 
+# Install FTP client if it is not installed
+if [ ! -f /usr/bin/ftp ]; then
+    apt install ftp
+fi
+
+#-----------------
+
 # Installed kernel
-[ -r "$INSTALLED_KERNEL_FILE" ] && installed=$(cat "$INSTALLED_KERNEL_FILE") || installed="unknown"
+[ -r "$INSTALLED_KERNEL_FILE" ] && installed=$(cat "$INSTALLED_KERNEL_FILE") || installed=$(uname -r | sed 's/-.*//')
 
 # Latest kernel
 latest=$(ftp -n ftp.ovh.net<<EOF_FTP|awk -F ' -> ' '{print $2}' | sed 's/\/$//'
